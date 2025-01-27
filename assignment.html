@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div class="container col-lg-6 col-10 mx-auto p-lg-4 p-2 shadow-sm">
+    <input type="text" class="form-control shadow-none my-3"  placeholder="The Great Developer" id="firstNumber">
+    <button class="btn btn-secondary my-2" onclick="multiply()">check</button>
+    <div id="id">Answer will show here</div>
+
+    <div class="container col-lg-6 col-10 mx-auto p-lg-4 p-2 shasow-sm">
+      <input type="text" class="form-control shadow-none my-3" placeholder="firstNumber" id="firstNumber">
+      <input type="text" class="form-control shadow-none my-3" placeholder="secondNumber" id="secondNumber">
+      <button class="btn btn-danger my-2" onclick="divide()"></button>
+    </div>
+    <script>
+          // A library at Markudi Polytechnic has a catalogue system where book titles must be unique. However, the system currently does not check for duplicate titles with different letter cases (e.g., "The Great Developer" and "the great developer"). As a developer, write an algorithm to detect duplicate book titles regardless of case sensitivity.
+
+          
+          word =/(['a-z A-Z'])//
+          console.log('word')
+          function multiply(){
+            
+            if(word=(['a-z A-Z'])){
+              console.log('original')
+            } else{
+              console.log('duplicate')
+            }
+
+          }
+          // A grocery store in Taki wants to reward customers who shop for an even number of items. You have been hired to write an algorithm that checks if the number of items in a customer’s cart is even and returns a discount if true.
+          function divide(){
+            var num = 10
+          if(num%2==0){
+            console.log('Even number');
+          } else{
+            console.log('odd number')
+          }
+          num%2==0?console.log('even number'):console.log('odd number')
+          2+2==5?console.log('true'):console.log('false')
+
+          }
+        const number1 = firstNumber.value
+        console.log(number1)
+        const number2 = secondNumber.value
+        console.log(number2)
+        const number = number1/number2
+        console.log(number) 
+         
+          // A weather station in LAUTECH is experiencing issues with its temperature recording system. The system needs to categorise temperatures as 'Cold' (below 19°C), 'Warm' (20°C to 28°C), or 'Hot' (above 28°C). Write an algorithm that categorizes the temperature based on these criteria.
+
+          var num=19
+          var num=20
+          if(num<19){
+            console.log('cold')
+          } else if(num>19<28){
+            console.log('warm')
+          } else{
+            console.log('hot')
+          }
+
+          // An online quiz platform built by a level 2 student in SQI requires an algorithm to check if a student’s answer matches the correct answer, regardless of the case (e.g., "ogbomoso" should match "Ogbomoso"). Write a function to handle this scenario.
+          var word=/(['a-z A-Z'])//
+          console.log(word)
+          if(word=word ){
+            console.log('true')
+          } else{
+            console.log('false')
+          }
+
+          // A gaming company in Abuja has noticed players creating usernames with spaces and special characters, which causes issues in their database. You have been tasked to write a function that validates usernames by ensuring they contain only letters, numbers, and underscores.
+          var word=/(['a-z A-Z 0-9 _'])//
+          console.log(word)
+           
+          if(name='Yehudah_23'){
+            console.log('acceptable')
+          } else(
+            console.log('not acceptable')
+          )
+
+          // An airline in Kano needs an algorithm to determine if a passenger’s luggage is overweight. The algorithm should take the luggage weight as input and return 'Underweight', 'Allowed', or 'Overweight' based on the weight limits (under 20kg is 'Underweight', 20-30kg is 'Allowed', above 30kg is 'Overweight').
+          var num= 0<=20
+          var num= 20<=30
+
+          if(num=0<20){
+            console.log('Underweight')
+          } else if(num=20<30){
+            console.log('Allowed')
+          } else{
+            console.log('Overweight')
+          }
+
+          // A delivery company in Aroje is facing complaints about incorrect package sorting due to mixed uppercase and lowercase addresses. You have been employed to develop an algorithm that ensures all address labels are transformed to lowercase before processing. Write a function to solve this issue.
+
+          var word=/(['a-z A-Z 0-9 _'])//
+          console.log(word)
+          if(name='Teaching_Hospital_Area'){
+            console.log(
+              'Right_Address'
+            )
+          }
+    </script>
+</body>
+</html>
