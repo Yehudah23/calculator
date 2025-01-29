@@ -7,101 +7,156 @@
 </head>
 <body>
   <div class="container col-lg-6 col-10 mx-auto p-lg-4 p-2 shadow-sm">
-    <input type="text" class="form-control shadow-none my-3"  placeholder="The Great Developer" id="firstNumber">
-    <button class="btn btn-secondary my-2" onclick="multiply()">check</button>
-    <div id="id">Answer will show here</div>
-
-    <div class="container col-lg-6 col-10 mx-auto p-lg-4 p-2 shasow-sm">
-      <input type="text" class="form-control shadow-none my-3" placeholder="firstNumber" id="firstNumber">
-      <input type="text" class="form-control shadow-none my-3" placeholder="secondNumber" id="secondNumber">
-      <button class="btn btn-danger my-2" onclick="divide()"></button>
+    <div>
+      <h3>Question 2</h3>
+      <input type="text" class="form-control shadow-none my-3"  placeholder="The Great Developer" id="great">
+      <button class="btn btn-secondary my-2" onclick="question2()">check</button>
     </div>
+
+    <div>
+      <h3>Question 5</h3>
+      <input type="number" class="form-control shadow-none my-3"  placeholder="Number of items ordered" id="itemsOrdered">
+      <button class="btn btn-secondary my-2" onclick="question5()">check</button>
+    </div>
+
+    <div>
+      <h3>Question 6</h3>
+      <input type="number" class="form-control shadow-none my-3"  placeholder="temperatureRecordingSystem" id="temperature">
+      <button class="btn btn-secondary my-2" onclick="question6()">check</button>
+    </div>
+
+    
+    <div>
+      <h3>Question 7</h3>
+      <input type="text" class="form-control shadow-none my-3"  placeholder="Ogbomoso" id="quiz">
+      <button class="btn btn-secondary my-2" onclick="question7()">check</button>
+    </div>
+
+    
+    <div>
+      <h3>Question 9</h3>
+      <input type="text" class="form-control shadow-none my-3"  placeholder="specialCharacters" id="userName">
+      <button class="btn btn-secondary my-2" onclick="question9()">check</button>
+    </div>
+
+    <div>
+      <h3>Question 10</h3>
+      <input type="text" class="form-control shadow-none my-3"  placeholder="luggageWeight" id="weightLimits">
+      <button class="btn btn-secondary my-2" onclick="question10()">check</button>
+    </div>
+
+    <div>
+      <h3>Question 1</h3>
+      <input type="text" class="form-control shadow-none my-3"  placeholder="incorrectPackage" id="lautechArea">
+      <button class="btn btn-secondary my-2" onclick="question1()">check</button>
+    </div>
+
+    <div>
+      <h3>Question 4</h3>
+      <input type="text" class="form-control shadow-none my-3"  placeholder="finanical" id="customer">
+      <button class="btn btn-secondary my-2" onclick="question4()">check</button>
+    </div>
+
+    
     <script>
           // A library at Markudi Polytechnic has a catalogue system where book titles must be unique. However, the system currently does not check for duplicate titles with different letter cases (e.g., "The Great Developer" and "the great developer"). As a developer, write an algorithm to detect duplicate book titles regardless of case sensitivity.
 
-          
-          word =/(['a-z A-Z'])//
-          console.log('word')
-          function multiply(){
-            
-            if(word=(['a-z A-Z'])){
-              console.log('original')
+          function question2(){
+            var existingTitle = 'The Great Developer'.toLowerCase()
+            var newTitle = great.value.toLowerCase()
+            if(existingTitle == newTitle ){
+              console.log('Title exists' )
             } else{
-              console.log('duplicate')
+              console.log('Title is unique')
             }
-
           }
           // A grocery store in Taki wants to reward customers who shop for an even number of items. You have been hired to write an algorithm that checks if the number of items in a customer’s cart is even and returns a discount if true.
-          function divide(){
-            var num = 10
-          if(num%2==0){
-            console.log('Even number');
-          } else{
-            console.log('odd number')
-          }
-          num%2==0?console.log('even number'):console.log('odd number')
-          2+2==5?console.log('true'):console.log('false')
 
+          function question5(){
+            var numberOfItems = itemsOrdered.value
+            console.log(typeof(numberOfItems))
+            if(numberOfItems%2==0){
+              console.log('Discount is available')
+            } else{
+              console.log('No discount')
+            }
           }
-        const number1 = firstNumber.value
-        console.log(number1)
-        const number2 = secondNumber.value
-        console.log(number2)
-        const number = number1/number2
-        console.log(number) 
-         
           // A weather station in LAUTECH is experiencing issues with its temperature recording system. The system needs to categorise temperatures as 'Cold' (below 19°C), 'Warm' (20°C to 28°C), or 'Hot' (above 28°C). Write an algorithm that categorizes the temperature based on these criteria.
 
-          var num=19
-          var num=20
-          if(num<19){
-            console.log('cold')
-          } else if(num>19<28){
-            console.log('warm')
-          } else{
-            console.log('hot')
-          }
+          function question6(){
+            var temperatureRecordingSystem = temperature.value
+            console.log(temperatureRecordingSystem)
+            if(temperatureRecordingSystem <= 19){
+              console.log('Cold')
+            } else if(temperatureRecordingSystem == 28){
+              console.log('Warm')
+            } else{
+              console.log('Hot')
+            }
+                  }
 
           // An online quiz platform built by a level 2 student in SQI requires an algorithm to check if a student’s answer matches the correct answer, regardless of the case (e.g., "ogbomoso" should match "Ogbomoso"). Write a function to handle this scenario.
-          var word=/(['a-z A-Z'])//
-          console.log(word)
-          if(word=word ){
-            console.log('true')
-          } else{
-            console.log('false')
+          function question7(){
+            var regardlessOfCase =' Ogbomoso'.toLowerCase()
+            var caseSensitive = quiz.value.toLowerCase()
+            if(regardlessOfCase = caseSensitive){
+              console.log('correct answer')
+            } else{
+              console.log('incorrect answer')
+            }
           }
+        
 
           // A gaming company in Abuja has noticed players creating usernames with spaces and special characters, which causes issues in their database. You have been tasked to write a function that validates usernames by ensuring they contain only letters, numbers, and underscores.
-          var word=/(['a-z A-Z 0-9 _'])//
-          console.log(word)
-           
-          if(name='Yehudah_23'){
-            console.log('acceptable')
-          } else(
-            console.log('not acceptable')
-          )
+          function question9(){
+            var regex1=/^[\w_]+$/
+            var specialCharacters = userName.value
+            console.log(regex1.test(specialCharacters));
+            
+            if(regex1.test(specialCharacters) ){
+              console.log('acceptable')
+            } else{
+              console.log('not acceptable')
+            }
+          }
 
           // An airline in Kano needs an algorithm to determine if a passenger’s luggage is overweight. The algorithm should take the luggage weight as input and return 'Underweight', 'Allowed', or 'Overweight' based on the weight limits (under 20kg is 'Underweight', 20-30kg is 'Allowed', above 30kg is 'Overweight').
-          var num= 0<=20
-          var num= 20<=30
-
-          if(num=0<20){
-            console.log('Underweight')
-          } else if(num=20<30){
-            console.log('Allowed')
-          } else{
-            console.log('Overweight')
+          function question10(){
+            var luggageWeight = weightLimits.value
+            console.log( luggageWeight)
+            if( luggageWeight <= 20 ){
+              console.log('underWeight')
+            } else if(luggageWeight == 30){
+              console.log('allowed')
+            } else{'overWeight'}
           }
 
           // A delivery company in Aroje is facing complaints about incorrect package sorting due to mixed uppercase and lowercase addresses. You have been employed to develop an algorithm that ensures all address labels are transformed to lowercase before processing. Write a function to solve this issue.
-
-          var word=/(['a-z A-Z 0-9 _'])//
-          console.log(word)
-          if(name='Teaching_Hospital_Area'){
-            console.log(
-              'Right_Address'
-            )
+          function question1(){
+            var incorrectPackage =' lautechArea'.toLowerCase()
+            var caseSensitive = lautechArea.value.toLowerCase()
+            if(incorrectPackage = caseSensitive){
+              console.log('correct answer')
+            } else{
+              console.log('incorrect answer')
+            }
           }
+
+          // A financial institution in Abeokuta needs an algorithm to verify if a customer’s password is strong. The password must be at least 8 characters long and contain uppercase and lowercase letters and a number. Write a function to validate passwords based on these rules.
+            function question4(){
+              var regex2 = /^[\w]{8,}$/
+              var financial = customer.value
+            console.log(regex1.test(financial));
+            
+            if(regex1.test(finacial) ){
+              console.log('acceptable')
+            } else{
+              console.log('not acceptable')
+            }
+            }
+
+         
+          
     </script>
 </body>
 </html>
